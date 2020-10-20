@@ -1,0 +1,24 @@
+.title {
+    font-family: $secondary-font;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.321;
+    text-align: center;
+    text-transform: uppercase;
+    color: $main-text-color;
+}
+
+@media screen and (min-width: 768px) {
+    .title {
+        font-size: 48px;
+        line-height: 1.25;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .title {
+        font-size: 72px;
+        line-height: 1.111;
+    }
+}

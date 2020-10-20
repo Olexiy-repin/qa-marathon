@@ -1,0 +1,113 @@
+.hero {
+    padding-bottom: 46px;
+
+    &__undertitle {
+        font-family: $secondary-font;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.222;
+        letter-spacing: 0.5px;
+        color: $main-text-color;
+        margin-bottom: 14px;
+
+        &-accent {
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        font-family: $secondary-font;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 1.321;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        max-width: 335px;
+        min-height: 94px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 22px;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 20px 0px;
+        color: $main-text-color;
+        margin-bottom: 34px;
+    }
+}
+
+.title-accent {
+    color: #1BC55F;
+}
+
+@media screen and (max-width: 767px), (min-width: 1440px) {
+    .hero {
+        &__undertitle {
+            text-align: center;
+        }
+
+        &__title {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        &__undertitle {
+            line-height: 1.389;
+            margin-bottom: 26px;
+            padding-right: 170px;
+        }
+
+        &__title {
+            font-size: 48px;
+            line-height: 1.25;
+            margin-bottom: 24px;
+        }
+
+        &__description {
+            max-width: 439px;
+            min-height: 83px;
+            font-size: 15px;
+            line-height: 1.467;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero {
+        &__undertitle {
+            font-size: 27px;
+            line-height: 1.185;
+            letter-spacing: 1px;
+            padding: 0 290px;
+            margin-bottom: 46px;
+        }
+
+        &__title {
+            font-size: 72px;
+            line-height: 1.111;
+            padding: 0 100px;
+            margin-bottom: 26px;
+
+            br {
+                display: none;
+            }
+        }
+
+        &__description {
+            max-width: 842px;
+            min-height: 120px;
+            font-size: 22px;
+            line-height: 1.5;
+            margin: 0 auto;
+            margin-bottom: 46px;
+        }
+    }
+}
