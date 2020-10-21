@@ -25,3 +25,16 @@ ol {
 a {
   text-decoration: none;
 }
+
+.accent-color {
+  color: $accent-color;
+}
+
+.transparent-text {
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+  -webkit-text-fill-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+  }
+}
