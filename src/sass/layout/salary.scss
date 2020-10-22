@@ -1,191 +1,265 @@
 .salary {
-    padding-top: 28px;
-    padding-bottom: 426px;
+  padding-top: 28px;
+  padding-bottom: 426px;
+  position: relative;
+
+  .title {
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  &__content-wrapper {
+    margin-bottom: 38px;
+  }
+
+  &__list {
+    margin-bottom: 24px;
+  }
+
+  &__list-item {
     position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
-    .title {
-        text-align: left;
-        margin-bottom: 16px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
     }
 
-    &__content-wrapper {
-        margin-bottom: 38px;
+    &:first-child {
+      .salary__list-item-name::after {
+        content: '........................................';
+      }
     }
 
-    &__list {
-        margin-bottom: 24px;
+    &:nth-child(2) {
+      .salary__list-item-name::after {
+        content: '................................................';
+      }
     }
 
+    &:last-child {
+      .salary__list-item-name::after {
+        content: '.................................';
+      }
+    }
+  }
+
+  &__list-item-name {
+    flex-grow: 1;
+    // width: 190px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.562;
+    color: $main-text-color;
+  }
+
+  &__list-item-price {
+    font-family: $secondary-font;
+    width: max-content;
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+
+  &__text-wrapper {
+    padding: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0px 22px 22px 22px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.642;
+    color: $main-text-color;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .salary {
     &__list-item {
-        position: relative;
-        z-index: 0;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-
-        &:not(:last-child) {
-            margin-bottom: 24px;
+      &:first-child {
+        .salary__list-item-name::after {
+          content: '..........................';
         }
+      }
 
-        // &::before {
-        //     position: absolute;
-        //     bottom: 8px;
-        //     left: 0;
-        //     z-index: -1;
-        //     content: "";
-        //     width: 100%;
-        //     height: 2px;
-        //     background-image: repeating-linear-gradient(to left, #000 0px 2px, transparent 2px 10px);
-        // }
-    }
-
-    &__list-item-name {
-        width: 190px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.562;
-        color: $main-text-color;
-        // background-color: #fff;
-    }
-
-    &__list-item-price {
-        font-weight: 800;
-        font-size: 28px;
-        letter-spacing: 4px;
-        // background-color: #fff;
-    }
-
-    &__text-wrapper {
-        padding: 15px;
-        border: 2px solid rgba(0,0,0,.1);
-        border-radius: 0px 22px 22px 22px;
-    }
-
-    &__text {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.642;
-        color: $main-text-color;
-
-        &:not(:last-child) {
-            margin-bottom: 28px;
+      &:nth-child(2) {
+        .salary__list-item-name::after {
+          content: '..................................';
         }
-    }
+      }
 
-    &__img {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+      &:last-child {
+        .salary__list-item-name::after {
+          content: '...................';
+        }
+      }
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .salary {
-        padding-top: 56px;
-        padding-bottom: 50px;
-        max-width: 768px;
-        margin: 0 auto;
+  .salary {
+    padding-top: 56px;
+    padding-bottom: 50px;
+    max-width: 768px;
+    margin: 0 auto;
 
-        .title {
-            width: 500px;
-            margin-bottom: 33px;
-        }
-
-        &__content-wrapper {
-            width: 450px;
-            margin-bottom: 40px;
-        }
-
-        &__list {
-            margin-bottom: 26px;
-        }
-
-        &__list-item {
-            align-items: flex-start;
-            min-height: 36px;
-            &:not(:last-child) {
-                margin-bottom: 26px;
-            }
-        }
-
-        &__list-item-name {
-            width: 350px;
-            font-size: 16px;
-        }
-    
-        &__list-item-price {
-            align-self: flex-end;
-            font-size: 30px;
-        }
-
-        &__img {
-            left: unset;
-            bottom: unset;
-            right: 0;
-            top: 0;
-            transform: translateX(0);
-        }
+    .title {
+      width: 500px;
+      margin-bottom: 33px;
     }
-}
 
-@media screen and (min-width: 1440px) {
-    .salary {
-        padding-top: 155px;
-        padding-bottom: 104px;
-        max-width: 1440px;
-        overflow: hidden;
-
-        .title {
-            width: 900px;
-        }
-
-        &__content-wrapper {
-            width: 960px;
-            margin-bottom: 55px;
-        }
-
-        &__list {
-            margin-bottom: 42px;
-        }
-
-        &__list-item {
-            min-height: unset;
-            align-items: flex-end;
-        }
-
-        &__list-item-name {
-            width: auto;
-            font-size: 24px;
-            line-height: 1.875;
-        }
-
-        &__list-item-price {
-            font-size: 50px;
-        }
-
-        &__text-wrapper {
-            width: 652px;
-            padding: 30px;
-        }
-
-        &__text {
-            font-size: 18px;
-            line-height: 1.667;
-        }
-
-        &__img {
-            right: -254px;
-        }
+    &__content-wrapper {
+      width: 450px;
+      margin-bottom: 40px;
     }
-}
 
-@media screen and (min-width: 1920px) {
-    .salary {
-       overflow: visible;
+    &__list {
+      margin-bottom: 26px;
+    }
+
+    &__list-item {
+      align-items: flex-start;
+      min-height: 36px;
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+
+      &:first-child {
+        .salary__list-item-name::after {
+          content: '......................................................................';
+        }
+      }
+
+      &:nth-child(2) {
+        .salary__list-item-name::after {
+          display: block;
+          content: '..........................................................................................';
+        }
+      }
+
+      &:last-child {
+        .salary__list-item-name::after {
+          display: block;
+          content: '........................................................................................';
+        }
+      }
+    }
+
+    &__list-item-name {
+      width: 350px;
+      font-size: 16px;
+    }
+
+    &__list-item-price {
+      align-self: flex-end;
+      font-size: 30px;
+      letter-spacing: 2.8px;
     }
 
     &__img {
-        right: 0;
+      left: unset;
+      bottom: unset;
+      right: 0;
+      top: 0;
+      transform: translateX(0);
     }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .salary {
+    padding-top: 155px;
+    padding-bottom: 104px;
+    max-width: 1440px;
+    overflow: hidden;
+
+    .title {
+      width: 900px;
+    }
+
+    &__content-wrapper {
+      width: 960px;
+      margin-bottom: 55px;
+    }
+
+    &__list {
+      margin-bottom: 42px;
+    }
+
+    &__list-item {
+      min-height: unset;
+      align-items: flex-end;
+
+      &:first-child {
+        .salary__list-item-name::after {
+          content: '........................';
+        }
+      }
+
+      &:nth-child(2) {
+        .salary__list-item-name::after {
+          display: inline;
+          content: '........................................................';
+        }
+      }
+
+      &:last-child {
+        .salary__list-item-name::after {
+          display: inline;
+          content: '..............................................................';
+        }
+      }
+    }
+
+    &__list-item-name {
+      width: auto;
+      font-size: 24px;
+      line-height: 1.875;
+    }
+
+    &__list-item-price {
+      font-size: 50px;
+    }
+
+    &__text-wrapper {
+      width: 652px;
+      padding: 30px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 1.667;
+    }
+
+    &__img {
+      right: -254px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .salary {
+    overflow: visible;
+  }
+
+  &__img {
+    right: 0;
+  }
 }

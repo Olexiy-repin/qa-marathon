@@ -1,0 +1,276 @@
+.programm {
+  padding-top: 28px;
+  padding-bottom: 54px;
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  &__cards {
+    padding-left: 20px;
+    margin-bottom: 24px;
+  }
+
+  &__card {
+    min-height: 362px;
+    background-color: #fff;
+    color: #000;
+
+    &-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 50px;
+      padding-left: 46px;
+      background-color: $accent-color;
+
+      &::before {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        z-index: 1;
+        display: block;
+        content: '';
+        transform: translate(-50%, -50%);
+
+        border: 25px solid transparent;
+        border-left: 25px solid #f7f7f7;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        width: 25px;
+        height: 100%;
+        background-color: $accent-color;
+      }
+    }
+
+    &-content {
+      padding-top: 18px;
+      padding-bottom: 34px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    &-header-text {
+      font-weight: 400;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.562;
+      margin-bottom: 14px;
+    }
+
+    &-list-item {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.562;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-text {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.562;
+      margin-top: 40px;
+    }
+  }
+
+  &__text {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.389;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #000000;
+    margin-bottom: 32px;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .programm {
+    &__card {
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .programm {
+    padding-top: 40px;
+    padding-bottom: 58px;
+
+    .title {
+      margin-bottom: 22px;
+    }
+
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+
+    &__card {
+      width: 215px;
+      min-height: 246px;
+
+      &-content {
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 20px;
+      }
+
+      &-header {
+        z-index: 0;
+        min-height: 34px;
+        padding-left: 32px;
+
+        &::before {
+          width: 34px;
+          height: 34px;
+
+          border: 17px solid transparent;
+          border-left: 17px solid #f7f7f7;
+        }
+
+        &::after {
+          width: 17px;
+          height: 100%;
+        }
+      }
+
+      &-header-text {
+        font-size: 12px;
+        line-height: 1.333;
+      }
+
+      &-title {
+        font-size: 12px;
+        line-height: 1.333;
+      }
+
+      &-list-item {
+        font-size: 12px;
+        line-height: 1.333;
+      }
+
+      &-text {
+        font-size: 12px;
+        line-height: 1.333;
+        margin-top: 20px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 1.438;
+      margin-bottom: 38px;
+      padding: 0 80px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .programm {
+    padding-top: 74px;
+    padding-bottom: 112px;
+
+    .title {
+      margin-bottom: 60px;
+    }
+
+    &__cards {
+      padding-left: 36px;
+      margin-bottom: 74px;
+    }
+
+    &__card {
+      width: 420px;
+      min-height: 482px;
+
+      &-header {
+        min-height: 66px;
+
+        &::before {
+          width: 66px;
+          height: 66px;
+
+          border: 33px solid transparent;
+          border-left: 33px solid #f7f7f7;
+        }
+
+        &::after {
+          width: 33px;
+        }
+      }
+
+      &-content {
+        padding-top: 26px;
+        padding-bottom: 46px;
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      &-header-text {
+        font-size: 24px;
+      }
+
+      &-title {
+        font-size: 22px;
+        line-height: 1.454;
+      }
+
+      &-list-item {
+        font-size: 22px;
+        line-height: 1.454;
+      }
+
+      &-text {
+        font-size: 22px;
+        line-height: 1.454;
+        margin-top: 54px;
+      }
+    }
+
+    &__text {
+      position: relative;
+      font-size: 36px;
+      line-height: 1.25;
+      padding: 0 130px;
+      margin-bottom: 48px;
+
+      &::before {
+        position: absolute;
+        left: -255px;
+        top: -8px;
+        content: '';
+        width: 374px;
+        height: 60px;
+        background-image: url('../images/programm/title-arrow.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

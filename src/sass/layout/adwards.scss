@@ -1,0 +1,351 @@
+.adwards {
+  padding-top: 46px;
+
+  .title {
+    margin-bottom: 28px;
+  }
+
+  &__top-content {
+    margin-bottom: 32px;
+  }
+
+  &__undertitle {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.222;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  &__list {
+    &-item {
+      min-height: 447px;
+      padding: 0 20px;
+      padding-bottom: 24px;
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.03);
+      border-radius: 22px 0px;
+      background-color: #fff;
+
+      &:first-child {
+        padding-top: 58px;
+
+        .adwards__list-item-picture {
+          margin-bottom: 36px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-top: 14px;
+        .adwards__list-item-picture {
+          margin-bottom: 22px;
+        }
+      }
+
+      &:last-child {
+        padding-top: 60px;
+        .adwards__list-item-picture {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &-item-title {
+      font-family: $secondary-font;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: 2px;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    &-item-text {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.375;
+      color: #000000;
+
+      b {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+    }
+
+    &-item-picture {
+      display: block;
+    }
+
+    &-item-img {
+      margin: 0 auto;
+    }
+  }
+
+  &__bottom-right-side {
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+
+  &__bottom-title {
+    font-weight: 500;
+    margin-bottom: 18px;
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.321;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__bottom-text:not(:last-of-type) {
+    margin-bottom: 18px;
+  }
+
+  .modal-btn {
+    margin-top: 32px;
+  }
+
+  &__bottom-picture {
+    display: block;
+    margin-top: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .adwards {
+    &__list {
+      &-item:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .adwards {
+    padding-top: 66px;
+    padding-bottom: 58px;
+    max-width: 768px;
+    margin: 0 auto;
+
+    .title {
+      margin-bottom: 34px;
+    }
+
+    &__top-content {
+      margin-bottom: 50px;
+    }
+
+    &__undertitle {
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+
+      &-item {
+        width: 220px;
+        min-height: 342px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 14px;
+
+        &:first-child {
+          padding-top: 0;
+
+          .adwards__list-item-picture {
+            padding-top: 12px;
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          padding-top: 0;
+          .adwards__list-item-picture {
+            padding-top: 12px;
+            margin-bottom: 0;
+          }
+        }
+
+        &:last-child {
+          padding-top: 0;
+          .adwards__list-item-picture {
+            padding-top: 38px;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-item-picture {
+        height: 154px;
+      }
+
+      &-item-title {
+        font-size: 16px;
+        line-height: 1.437;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+
+      &-item-text {
+        font-size: 12px;
+        line-height: 1.417;
+
+        b {
+          margin-bottom: 12px;
+        }
+      }
+    }
+
+    &__bottom-content {
+      position: relative;
+    }
+
+    &__bottom-right-side {
+      width: 326px;
+      font-size: 16px;
+      line-height: 1.562;
+      margin-left: auto;
+    }
+
+    &__bottom-title {
+      margin-bottom: 26px;
+      span {
+        font-size: 34px;
+        line-height: 1;
+        margin-bottom: 26px;
+      }
+    }
+
+    &__bottom-text:not(:last-of-type) {
+      margin-bottom: 26px;
+    }
+
+    &__bottom-picture {
+      position: absolute;
+      top: 0;
+      left: -40px;
+      margin-top: 0;
+    }
+
+    .modal-btn {
+      min-width: 330px;
+      margin-top: 28px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .adwards {
+    padding-top: 106px;
+    padding-bottom: 92px;
+    max-width: 1440px;
+
+    &__undertitle {
+      font-size: 26px;
+      line-height: 1.231;
+      letter-spacing: 1px;
+      padding: 0 180px;
+      margin-bottom: 20px;
+    }
+
+    &__top-content {
+      margin-bottom: 140px;
+    }
+
+    .title {
+      margin-bottom: 75px;
+    }
+
+    &__list {
+      &-item {
+        width: 450px;
+        min-height: 605px;
+        padding-left: 36px;
+        padding-right: 36px;
+        padding-bottom: 24px;
+
+        &:first-child {
+          padding-top: 0;
+
+          .adwards__list-item-picture {
+            padding-top: 54px;
+            margin-bottom: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          padding-top: 0;
+          .adwards__list-item-picture {
+            padding-top: 26px;
+            margin-bottom: 0;
+          }
+        }
+
+        &:last-child {
+          padding-top: 0;
+          .adwards__list-item-picture {
+            padding-top: 88px;
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-item-picture {
+        height: 340px;
+      }
+
+      &-item-title {
+        font-size: 36px;
+        line-height: 1.278;
+        letter-spacing: 2px;
+        margin-bottom: 22px;
+      }
+
+      &-item-text {
+        font-size: 18px;
+        line-height: 1.389;
+
+        b {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    &__bottom-right-side {
+      width: 690px;
+      font-size: 24px;
+      line-height: 1.458;
+    }
+
+    &__bottom-title {
+      margin-bottom: 62px;
+      span {
+        font-size: 48px;
+        margin-bottom: 22px;
+      }
+    }
+
+    &__bottom-text:not(:last-of-type) {
+      margin-bottom: 62px;
+    }
+
+    &__bottom-picture {
+      left: -144px;
+    }
+
+    .modal-btn {
+      min-width: 650px;
+      height: 78px;
+      font-size: 19px;
+      margin: 0;
+      margin-top: 56px;
+    }
+  }
+}
